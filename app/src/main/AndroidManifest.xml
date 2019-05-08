@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.divyank.dad">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DAD"
+        tools:replace="android:label"
+        android:supportsRtl="true"
+        android:theme="@style/FullscreenTheme"
+        android:windowSoftInputMode="adjustResize"
+        android:largeHeap="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Dad Activity Diary"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter android:label="DAD">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MyIntro" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+
+
+        <activity android:name=".Today_listItem"
+        android:label="Dad Activity Diary"
+        android:windowSoftInputMode="adjustResize"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:configChanges="orientation|keyboardHidden|screenSize">
+    </activity>
+
+        <activity android:name=".Addextraevent"
+            android:label="Dad Activity Diary"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity android:name=".Addreminder"
+            android:label="Dad Activity Diary"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+
+
+        <activity android:name=".Loadimages"
+            android:label="Dad Activity Diary"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+
+
+        <activity android:name=".Cardview"
+            android:label="Dad Activity Diary"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity"
+            tools:replace="android:theme"
+            android:theme="@style/OverrideMultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.darsh.multipleimageselect.activities.ImageSelectActivity"
+            tools:replace="android:theme"
+            android:theme="@style/OverrideMultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".AlarmReceiver">
+        </receiver>
+
+        <receiver android:name=".Alarmreminder">
+        </receiver>
+
+        <receiver android:name=".AlarmReceiver1">
+        </receiver>
+
+    <!-- Will not be called unless the application explicitly enables it -->
+    <receiver android:name=".DeviceBootReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        </intent-filter>
+    </receiver>
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+
+
+
+</manifest>
